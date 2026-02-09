@@ -3,6 +3,28 @@
 This directory contains ADNI NIfTI scans, input/output path lists, and the outputs from a turboprep run.
 
 ## Contents
+- Dataset dir structure.
+<pre>
+.
+├── input_0206.txt
+├── input.txt
+├── MNI152_T1_1mm_brain.nii
+├── output_0206.txt
+├── output.txt
+├── raw
+    ├── XXX.nii
+    └── ...
+├── README.md
+├── scripts
+    ├── turboprep_postproc.py
+    └── turboprep_preproc.py
+└── turboprep_out
+    └── ADNI_941_S_1311_MR_MPR__GradWarp_Br_20081026142330778_S56645_I123814
+        ├── affine_transf.mat
+        ├── normalized.nii.gz
+        ├── mask.nii.gz
+        └── segm.nii.gz
+</pre>
 - `raw/` original NIfTI inputs organized by subject/session folders.
 - `turboprep_out/` per-scan output directories.
 - `MNI152_T1_1mm_brain.nii` template volume file.
@@ -10,7 +32,7 @@ This directory contains ADNI NIfTI scans, input/output path lists, and the outpu
 - `output.txt` output file paths for preprocessing.
 - `input_0206.txt` runtime log of input file paths during preprocessing (identical to input.txt).
 - `output_0206.txt` runtime log of output file paths during preprocessing (identical to output.txt).
-- Check out dataset repo structure.
+- Check out dataset repo structure on Huggingface.
 <pre>
 python3 - <<'PY'
 from huggingface_hub import HfApi
